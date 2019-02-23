@@ -1,9 +1,11 @@
 # List of cool snippets
 
-### ⚙ Prerequisites - setup
+## ⚙ Prerequisites - setup
 * Have intelliJ idea and Jdk-11
 * Set [x] `Enable Annotation Processing` 
 * Set [x] `Create directories for empty content roots automatically`
+
+<br>
 
 ## Java ☕
 
