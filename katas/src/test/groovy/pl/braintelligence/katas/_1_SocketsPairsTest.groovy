@@ -26,9 +26,12 @@ class _1_SocketsPairsTest extends Specification {
         def socketPairs = new Kotlin_1_SocketsPairs()
 
         when:
-        def result = socketPairs.countNumberOfPairs(LIST_OF_SOCKS_COLORS)
+        def result = socketPairs.countNumberOfPairs1(LIST_OF_SOCKS_COLORS)
+        def result2 = socketPairs.countNumberOfPairs2(LIST_OF_SOCKS_COLORS)
 
         then:
         result == NUMBER_OF_PAIRS
+        result2 == NUMBER_OF_PAIRS
+
     }
 }

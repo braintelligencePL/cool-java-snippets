@@ -2,7 +2,7 @@ package pl.braintelligence.katas
 
 class Kotlin_1_SocketsPairs {
 
-    fun countNumberOfPairs(arr: IntArray): Int {
+    fun countNumberOfPairs1(arr: IntArray): Int {
         val colors: List<Int> = arr.toList()
 
         val groupedColors = colors.groupBy { it }
