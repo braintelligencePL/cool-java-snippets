@@ -9,7 +9,7 @@ class _1_SocketsPairsTest extends Specification {
     public static final int[] LIST_OF_SOCKS_COLORS = [1, 1, 3, 1, 2, 1, 3, 3, 3, 3]
 
     def "Should count number of pairs (test for java)"() {
-        given: "primitive array of sockets colors"
+        given:
         def socketPairs = new Java_1_SocketsPairs()
 
         when: "count all pairs"
@@ -20,10 +20,10 @@ class _1_SocketsPairsTest extends Specification {
     }
 
     def "Should count number of pairs (test for kotlin)"() {
-        given: "primitive array of sockets colors"
+        given:
         def socketPairs = new Kotlin_1_SocketsPairs()
 
-        when: "find all pairs"
+        when:
         def result = socketPairs.countNumberOfPairs(LIST_OF_SOCKS_COLORS)
 
         then:
