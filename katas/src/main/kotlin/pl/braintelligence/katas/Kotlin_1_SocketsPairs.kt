@@ -7,9 +7,9 @@ class Kotlin_1_SocketsPairs {
 
         val groupedColors = colors.groupBy { it }
 
-        val countedColorPairs = groupedColors.values.map { it.size / 2 }
+        val eachGroupPairsCounted = groupedColors.values.map { it.size / 2 }
 
-        return countedColorPairs.sum()
+        return eachGroupPairsCounted.sum()
     }
 
     fun findAllPairs2(arr: IntArray) = arr.toTypedArray()

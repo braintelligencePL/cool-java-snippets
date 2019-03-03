@@ -9,17 +9,16 @@ import java.util.stream.IntStream;
 public class Java_1_SocketsPairs {
 
     public static int countNumberOfPairs(int[] socketsColors) {
-
         List<Integer> colors = primitiveToIntegerList(socketsColors);
 
         var groupedColors = groupByColors(colors);
 
-        var countedColorPairs = groupedColors.values()
+        var countEachColorGroupPairs = groupedColors.values()
                 .stream()
                 .map(countPairs())
                 .mapToInt(Integer::intValue);
 
-        return countedColorPairs.sum();
+        return countEachColorGroupPairs.sum();
     }
 
     private static List<Integer> primitiveToIntegerList(int[] socksColors) {
