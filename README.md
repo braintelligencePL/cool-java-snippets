@@ -13,10 +13,14 @@
 
 * classical way with a use of a standard library
 * functional way with a use of [jOOλ - lib](https://github.com/jOOQ/jOOL) 
-* functional way with a use of [vavr - lib](https://github.com/vavr-io/vavr) (my favourite 🖤)
+* functional way with a use of [vavr - lib](https://github.com/vavr-io/vavr)
 
-## Kotlin  💪
-<br>
+## Kotlin 💪
+
+### 💪 link 
+
+* functional way with [Arrow - lib](https://arrow-kt.io/docs/) (similar to vavr in Java)
+
 
 ## Scala  🧰
 <br> 
