@@ -8,20 +8,21 @@ import java.util.stream.IntStream;
 
 public class Java_1_SocketsPairs {
 
-    public static int findAllPairs(int[] socketsColors) {
+    public static int countNumberOfPairs(int[] socketsColors) {
 
-        List<Integer> colors = toIntegerList(socketsColors);
+        List<Integer> colors = primitiveToIntegerList(socketsColors);
 
         var groupedColors = groupByColors(colors);
 
-        return groupedColors.values()
+        var countedColorPairs = groupedColors.values()
                 .stream()
                 .map(countPairs())
-                .mapToInt(Integer::intValue)
-                .sum();
+                .mapToInt(Integer::intValue);
+
+        return countedColorPairs.sum();
     }
 
-    private static List<Integer> toIntegerList(int[] socksColors) {
+    private static List<Integer> primitiveToIntegerList(int[] socksColors) {
         return IntStream.of(socksColors)
                 .boxed()
                 .collect(Collectors.toList());

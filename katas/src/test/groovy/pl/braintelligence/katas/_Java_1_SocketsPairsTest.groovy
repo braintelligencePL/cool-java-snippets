@@ -13,7 +13,7 @@ class _Java_1_SocketsPairsTest extends Specification {
         def socketPairs = new Java_1_SocketsPairs()
 
         when: "count all pairs"
-        def result = socketPairs.findAllPairs(LIST_OF_SOCKS_COLORS)
+        def result = socketPairs.countNumberOfPairs(LIST_OF_SOCKS_COLORS)
 
         then:
         result == NUMBER_OF_PAIRS
@@ -24,7 +24,7 @@ class _Java_1_SocketsPairsTest extends Specification {
         def socketPairs = new Kotlin_1_SocketsPairs()
 
         when: "find all pairs"
-        def result = socketPairs.findAllPairs(LIST_OF_SOCKS_COLORS)
+        def result = socketPairs.countNumberOfPairs(LIST_OF_SOCKS_COLORS)
 
         then:
         result == NUMBER_OF_PAIRS

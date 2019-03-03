@@ -2,14 +2,22 @@ package pl.braintelligence.katas
 
 class Kotlin_1_SocketsPairs {
 
-    fun findAllPairs(arr: IntArray): Int {
+    fun countNumberOfPairs(arr: IntArray): Int {
         val colors: Array<Int> = arr.toTypedArray()
 
         val groupedColors = colors.groupBy { it }
 
-        val eachColorPairs = groupedColors.values.map { it.size / 2 }
+        val countedColorPairs = groupedColors.values.map { it.size / 2 }
 
-        return eachColorPairs.sum()
+        return countedColorPairs.sum()
     }
+
+    fun findAllPairs2(arr: IntArray) = arr.toTypedArray()
+            .groupBy { color -> color }
+            .values
+            .map { countPairs(it) }
+            .sum()
+
+    private fun countPairs(it: List<Int>) = it.size / 2
 
 }
