@@ -1,2 +1,3 @@
 include 'jvm-languages-snippets'
 include 'data-structures'
+include 'katas'
