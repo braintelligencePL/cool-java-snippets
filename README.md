@@ -17,7 +17,7 @@
 
 ## Kotlin 💪
 
-### 💪 link 
+### ⚙ link 
 
 * functional way with [Arrow - lib](https://arrow-kt.io/docs/) (similar to vavr in Java)
 
