@@ -1,6 +1,6 @@
 package pl.braintelligence.katas
 
-class Kotlin_1_FindSocketsPairs {
+class Kotlin_1_SocketsPairs {
 
     fun findAllPairs(arr: IntArray): Int {
         val colors: Array<Int> = arr.toTypedArray()
