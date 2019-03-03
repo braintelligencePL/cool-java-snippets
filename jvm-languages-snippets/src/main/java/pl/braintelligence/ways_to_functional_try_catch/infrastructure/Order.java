@@ -1,4 +1,4 @@
-package braintelligence.ways_to_functional_try_catch.infrastructure;
+package pl.braintelligence.ways_to_functional_try_catch.infrastructure;
 
 import lombok.Data;
 
