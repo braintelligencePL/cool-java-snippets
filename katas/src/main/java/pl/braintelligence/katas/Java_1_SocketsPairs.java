@@ -40,5 +40,8 @@ public class Java_1_SocketsPairs {
                 );
     }
 
+    public String getNull() {
+        return null;
+    }
 }
 
