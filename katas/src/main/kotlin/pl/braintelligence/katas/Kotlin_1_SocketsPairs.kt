@@ -12,6 +12,11 @@ class Kotlin_1_SocketsPairs {
         return eachPairsGroupCounted.sum()
     }
 
+    fun countNumberOfPairs2(arr: IntArray) = arr.toList()
+            .groupBy { it }.values
+            .map { countPairs(it) }
+            .sum()
+
     private fun countPairs(it: List<Int>) = it.size / 2
 
 }
