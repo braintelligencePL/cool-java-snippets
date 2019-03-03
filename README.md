@@ -9,7 +9,7 @@
 
 ## Java  ☕
 
-### ☕ [Three ways to TryAndCatch]()
+### ☕ [Three ways to TryAndCatch]() [WIP]
 
 * classical way with a use of a standard library
 * functional way with a use of [jOOλ - lib](https://github.com/jOOQ/jOOL) 
@@ -17,7 +17,7 @@
 
 ## Kotlin 💪
 
-### ⚙ [Three ways to TryAndCatch]()
+### ⚙ [Three ways to TryAndCatch]() [WIP]
 
 * classical way with a use of a standard library
 * functional way with [Arrow - lib](https://arrow-kt.io/docs/) (similar to vavr in Java)
