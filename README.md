@@ -29,7 +29,7 @@
 
 ### [Sock Merchant](https://www.hackerrank.com/challenges/sock-merchant/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=warmup) 
 
-Count possible number of pairs for socks (pair=color_1, color_1) ]
+Count possible number of pairs for given array of socks colors `pair=color_1, color_1` ]
 
 * [Tests in Spock](https://github.com/braintelligencePL/snippets-and-katas-of-jvm-languages/blob/master/katas/src/test/groovy/pl/braintelligence/katas/_1_SocketsPairsTest.groovy) : [Solution in Java](https://github.com/braintelligencePL/snippets-and-katas-of-jvm-languages/blob/master/katas/src/main/java/pl/braintelligence/katas/Java_1_SocketsPairs.java)
 
