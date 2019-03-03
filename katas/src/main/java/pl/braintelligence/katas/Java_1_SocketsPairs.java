@@ -13,12 +13,12 @@ public class Java_1_SocketsPairs {
 
         var groupedColors = groupByColors(colors);
 
-        var countEachColorGroupPairs = groupedColors.values()
+        var eachPairsGroupCounted = groupedColors.values()
                 .stream()
                 .map(countPairs())
                 .mapToInt(Integer::intValue);
 
-        return countEachColorGroupPairs.sum();
+        return eachPairsGroupCounted.sum();
     }
 
     private static List<Integer> primitiveToIntegerList(int[] socksColors) {
