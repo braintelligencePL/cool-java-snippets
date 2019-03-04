@@ -8,7 +8,7 @@ import java.util.stream.IntStream;
 
 public class Java_1_SocketsPairs {
 
-    public static int countNumberOfPairs(int[] socketsColors) {
+    public static int countNumberOfPairs1(int[] socketsColors) {
         List<Integer> colors = primitiveToIntegerList(socketsColors);
 
         var groupedColors = groupByColors(colors);
@@ -19,6 +19,17 @@ public class Java_1_SocketsPairs {
                 .mapToInt(Integer::intValue);
 
         return eachPairsGroupCounted.sum();
+    }
+
+    public static int countNumberOfPairs2(int[] socketsColors) {
+        return IntStream.of(socketsColors)
+                .boxed()
+                .collect(
+                        Collectors.collectingAndThen(
+                                Collectors.groupingBy(Integer::intValue),
+                                map -> map.values().stream()))
+                .mapToInt(list -> list.size() / 2)
+                .sum();
     }
 
     private static List<Integer> primitiveToIntegerList(int[] socksColors) {
