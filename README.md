@@ -1,5 +1,7 @@
 # List of cool snippets
 
+Feel free to create PR with better solutions!
+
 #### ⚙ Prerequisites - setup
 * Have IntelliJ idea and Jdk-11
 * Set [x] `Enable Annotation Processing` 
