@@ -26,7 +26,7 @@
 
 <br>
 
-### [Sock Merchant - link to the problem](https://www.hackerrank.com/challenges/sock-merchant/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=warmup) 
+### [Sock Merchant](https://www.hackerrank.com/challenges/sock-merchant/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=warmup) 
 
 Count possible number of pairs for given array of socks colors `pair=color_1, color_1`
 
@@ -36,7 +36,7 @@ Count possible number of pairs for given array of socks colors `pair=color_1, co
 
 <br>
 
-### [Sum of multiples 3 and 5 - link to the problem](https://www.hackerrank.com/contests/projecteuler/challenges/euler001/problem)
+### [Sum of multiples 3 and 5](https://www.hackerrank.com/contests/projecteuler/challenges/euler001/problem)
 
 Given NaturalNumber=10 we get 3,6,9 and 5. Sum of it is 23.
 
