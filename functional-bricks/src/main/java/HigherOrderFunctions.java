@@ -14,7 +14,7 @@ public class HigherOrderFunctions {
 
     }
 
-    private String availableCustomers(Supplier<Boolean> customerFunction) {
+    String availableCustomers(Supplier<Boolean> customerFunction) {
         return String.valueOf(customerFunction.get());
     }
 }
