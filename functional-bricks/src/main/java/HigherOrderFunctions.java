@@ -2,7 +2,6 @@ import lombok.extern.slf4j.Slf4j;
 import lombok.val;
 
 import java.util.function.Supplier;
-import java.util.stream.Stream;
 
 @Slf4j
 public class HigherOrderFunctions {
@@ -10,12 +9,8 @@ public class HigherOrderFunctions {
 
         val higherOrderFunctions = new HigherOrderFunctions();
 
+        // function( takes another function as parameter )
         log.info(higherOrderFunctions.availableCustomers(Customer::isAvailable));
-
-        int[] ar = {1, 2, 3};
-
-        Stream<int[]> integers = Stream.of(ar);
-
 
     }
 

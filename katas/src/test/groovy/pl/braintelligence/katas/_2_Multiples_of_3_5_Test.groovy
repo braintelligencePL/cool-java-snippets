@@ -16,8 +16,8 @@ class _2_Multiples_of_3_5_Test extends Specification {
         def sumOfMultiples = new Java_2_Multiples_of_3_5()
 
         when: "N=10 we get 3,6,9 and 5"
-        def result1 = sumOfMultiples.getSum(NATURAL_NUMBER_10)
-        def result2 = sumOfMultiples.getSum(NATURAL_NUMBER_100)
+        def result1 = sumOfMultiples.findSum(NATURAL_NUMBER_10)
+        def result2 = sumOfMultiples.findSum(NATURAL_NUMBER_100)
 
         then: "sum for 3+6+9+5 is 23"
         result1 == SUM_OF_3_5_MULTIPLES_10
@@ -29,8 +29,8 @@ class _2_Multiples_of_3_5_Test extends Specification {
         def sumOfMultiples = new Kotlin_2_Multiples_of_3_5()
 
         when: "For NaturalNumber=10 we get 3,6,9 and 5"
-        def result1 = sumOfMultiples.findSumOfMultiples_3_5(NATURAL_NUMBER_10)
-        def result2 = sumOfMultiples.findSumOfMultiples_3_5(NATURAL_NUMBER_100)
+        def result1 = sumOfMultiples.findSum(NATURAL_NUMBER_10)
+        def result2 = sumOfMultiples.findSum(NATURAL_NUMBER_100)
 
         then: "sum for NaturalNumber=10 is 23 (3+6+9+5)"
         result1 == SUM_OF_3_5_MULTIPLES_10
