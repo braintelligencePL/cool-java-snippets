@@ -1,5 +1,7 @@
 # List of cool snippets
 
+Feel free to create PR with better solutions!
+
 #### ⚙ Prerequisites - setup
 * Have IntelliJ idea and Jdk-11
 * Set [x] `Enable Annotation Processing` 
@@ -24,11 +26,27 @@
 
 ## Katas 🥋🥋
 
+<br>
+
 ### [Sock Merchant](https://www.hackerrank.com/challenges/sock-merchant/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=warmup) 
 
 Count possible number of pairs for given array of socks colors `pair=color_1, color_1`
 
-* [Tests in Spock](https://github.com/braintelligencePL/snippets-and-katas-of-jvm-languages/blob/master/katas/src/test/groovy/pl/braintelligence/katas/_1_SocketsPairsTest.groovy) : [Solution in Java](https://github.com/braintelligencePL/snippets-and-katas-of-jvm-languages/blob/master/katas/src/main/java/pl/braintelligence/katas/Java_1_SocketsPairs.java)
+* [Start with Spock tests](https://github.com/braintelligencePL/snippets-and-katas-of-jvm-languages/blob/master/katas/src/test/groovy/pl/braintelligence/katas/_1_SocketsPairsTest.groovy)
 
-* [Tests in Spock](https://github.com/braintelligencePL/snippets-and-katas-of-jvm-languages/blob/master/katas/src/test/groovy/pl/braintelligence/katas/_1_SocketsPairsTest.groovy) : [Solution in Kotlin](https://github.com/braintelligencePL/snippets-and-katas-of-jvm-languages/blob/master/katas/src/main/kotlin/pl/braintelligence/katas/Kotlin_1_SocketsPairs.kt)
+<b> Solution in <b>: `Java`, `Kotlin`
+
+<br>
+
+### [Sum of multiples 3 and 5](https://www.hackerrank.com/contests/projecteuler/challenges/euler001/problem)
+
+Given NaturalNumber=10 we get 3,6,9 and 5. Sum of it is 23.
+
+* [Start Spock tests](https://github.com/braintelligencePL/snippets-and-katas-of-jvm-languages/blob/master/katas/src/test/groovy/pl/braintelligence/katas/_2_Multiples_of_3_5_Test.groovy)
+
+<b> Solution in <b>: `Java`, `Kotlin`
+  
+<br>
+
+
 
