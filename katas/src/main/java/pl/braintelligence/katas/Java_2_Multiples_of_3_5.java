@@ -4,11 +4,13 @@ import java.util.stream.IntStream;
 
 public class Java_2_Multiples_of_3_5 {
 
-    public long findSumOfMultiples_3_5(int naturalNumber) {
+    public int getSum(int naturalNumber) {
 
+        int result = IntStream.range(3, naturalNumber)
+                .filter(step -> step % 3 == 0 || step % 5 == 0).sum();
 
-
-        return 1L;
+        return result;
     }
+
 }
 

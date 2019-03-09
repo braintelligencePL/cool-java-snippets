@@ -2,7 +2,7 @@ package pl.braintelligence.katas
 
 import spock.lang.Specification
 
-// Sock Merchant - from Hackerrank
+// Sock Merchant - from HackerRank
 class _1_SocketsPairsTest extends Specification {
 
     public static final int NUMBER_OF_PAIRS = 4
@@ -35,5 +35,4 @@ class _1_SocketsPairsTest extends Specification {
         numberOfPairsLongVersion == NUMBER_OF_PAIRS
         numberOfPairsShortVersion == NUMBER_OF_PAIRS
     }
-
 }
