@@ -32,7 +32,7 @@ Count possible number of pairs for given array of socks colors `pair=color_1, co
 
 * [Start with Spock tests](https://github.com/braintelligencePL/snippets-and-katas-of-jvm-languages/blob/master/katas/src/test/groovy/pl/braintelligence/katas/_1_SocketsPairsTest.groovy)
 
-`Solution in`: Java, Kotlin
+<b> Solution in <b>: `Java`, `Kotlin`
 
 <br>
 
@@ -42,4 +42,9 @@ Given NaturalNumber=10 we get 3,6,9 and 5. Sum of it is 23.
 
 * [Start Spock tests](https://github.com/braintelligencePL/snippets-and-katas-of-jvm-languages/blob/master/katas/src/test/groovy/pl/braintelligence/katas/_2_Multiples_of_3_5_Test.groovy)
 
-`Solution in`: Java, Kotlin
+<b> Solution in <b>: `Java`, `Kotlin`
+  
+<br>
+
+
+
