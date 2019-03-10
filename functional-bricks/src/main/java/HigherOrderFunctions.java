@@ -10,11 +10,11 @@ public class HigherOrderFunctions {
         val higherOrderFunctions = new HigherOrderFunctions();
 
         // function( takes another function as parameter )
-        log.info(higherOrderFunctions.availableCustomers(Customer::isAvailable));
+        log.info(higherOrderFunctions.isCustomerAvailable(Customer::isAvailable));
 
     }
 
-    String availableCustomers(Supplier<Boolean> customerFunction) {
+    private String isCustomerAvailable(Supplier<Boolean> customerFunction) {
         return String.valueOf(customerFunction.get());
     }
 }
@@ -24,3 +24,4 @@ class Customer {
         return true;
     }
 }
+

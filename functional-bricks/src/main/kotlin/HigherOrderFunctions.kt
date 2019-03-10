@@ -14,4 +14,3 @@ fun main() {
     val mulResult = calculate(4, 5) { a, b -> a * b }
     println("sumResult $sumResult, mulResult $mulResult")
 }
-
