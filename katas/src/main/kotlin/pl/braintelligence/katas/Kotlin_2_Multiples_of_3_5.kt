@@ -9,8 +9,8 @@ class Kotlin_2_Multiples_of_3_5 {
 
     fun findSum2(naturalNumber: Int): Int =
             (3 until naturalNumber)
-                    .filter { checkMultipleOf(3, it) || checkMultipleOf(5, it) }
+                    .filter { checkMultiplesOf(3, it) || checkMultiplesOf(5, it) }
                     .sum()
 
-    private fun checkMultipleOf(multiple: Int, currentValue: Int) = currentValue % multiple == 0
+    private fun checkMultiplesOf(multiple: Int, currentValue: Int) = currentValue % multiple == 0
 }
