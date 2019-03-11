@@ -17,10 +17,10 @@ class _3_BigDecimalSortDescTest extends Specification {
         ]
 
         when:
-        def result = subject.sortNumbersDescending(numbers)
+        def sorted = subject.sortNumbersDescending(numbers)
 
         then:
-        with(result) {
+        with(sorted) {
             get(0) == 50.2
             get(1) == 02.24
             get(2) == 0.123
@@ -41,10 +41,10 @@ class _3_BigDecimalSortDescTest extends Specification {
         ]
 
         when:
-        def result = subject.sortNumbersDescending(numbers)
+        def sorted = subject.sortNumbersDescending(numbers)
 
         then:
-        with(result) {
+        with(sorted) {
             get(0) == 50.2
             get(1) == 02.24
             get(2) == 0.123
