@@ -12,11 +12,11 @@ class _1_SocketsPairsTest extends Specification {
 
     def "(java) Should count number of pairs"() {
         given:
-        def socketPairs = new Java_1_SocketsPairs()
+        def subject = new Java_1_SocketsPairs()
 
         when: "count all possible socks pairs of each color"
-        def numberOfPairsLongVersion = socketPairs.countNumberOfPairsLongVersion(LIST_OF_SOCKS_COLORS)
-        def numberOfPairsShortVersion = socketPairs.countNumberOfPairsShortVersion(LIST_OF_SOCKS_COLORS)
+        def numberOfPairsLongVersion = subject.countNumberOfPairsLongVersion(LIST_OF_SOCKS_COLORS)
+        def numberOfPairsShortVersion = subject.countNumberOfPairsShortVersion(LIST_OF_SOCKS_COLORS)
 
         then:
         numberOfPairsLongVersion == NUMBER_OF_PAIRS
@@ -25,11 +25,11 @@ class _1_SocketsPairsTest extends Specification {
 
     def "(kotlin) Should count number of pairs"() {
         given:
-        def socketPairs = new Kotlin_1_SocketsPairs()
+        def subject = new Kotlin_1_SocketsPairs()
 
         when: "count all possible socks pairs of each color"
-        def numberOfPairsLongVersion = socketPairs.countNumberOfPairsLongVersion(LIST_OF_SOCKS_COLORS)
-        def numberOfPairsShortVersion = socketPairs.countNumberOfPairsShortVersion(LIST_OF_SOCKS_COLORS)
+        def numberOfPairsLongVersion = subject.countNumberOfPairsLongVersion(LIST_OF_SOCKS_COLORS)
+        def numberOfPairsShortVersion = subject.countNumberOfPairsShortVersion(LIST_OF_SOCKS_COLORS)
 
         then:
         numberOfPairsLongVersion == NUMBER_OF_PAIRS

@@ -11,4 +11,3 @@ public class Java_2_Multiples_of_3_5 {
     }
 
 }
-

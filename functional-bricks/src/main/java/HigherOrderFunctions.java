@@ -1,7 +1,6 @@
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
 
-import java.util.function.Function;
 import java.util.function.Supplier;
 
 @Slf4j
