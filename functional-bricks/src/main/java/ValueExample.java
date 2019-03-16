@@ -26,7 +26,6 @@ public class ValueExample {
 
         System.out.println(result2); // google.pl
 
-
         // Lazy (is memoized and its referentially transparent)
         val result3 = Lazy.of(UUID.randomUUID())
                 .map(Object::toString)
@@ -35,4 +34,21 @@ public class ValueExample {
         System.out.println(result3.get());
 
     }
+
+
 }
+
+
+class TryExample {
+    public static void main(String[] args) {
+        divide(1, 0)
+                .onFailure(e -> System.out.println("Not a number"))
+                .onSuccess(System.out::println);
+    }
+
+    static Try<Integer> divide(Integer dividend, Integer divisor) {
+        return Try.of(() -> dividend / divisor);
+    }
+}
+
+
