@@ -1,3 +1,5 @@
+import io.vavr.collection.List;
+import io.vavr.collection.Seq;
 import io.vavr.control.Option;
 import io.vavr.control.Try;
 import lombok.val;
@@ -8,7 +10,6 @@ import java.util.UUID;
 
 public class ValueExample {
     public static void main(String[] args) {
-
 
         // Option
         val result1 = Option.of(null)
@@ -38,8 +39,7 @@ public class ValueExample {
 
 }
 
-
-class TryExample {
+class AnotherTryExample {
     public static void main(String[] args) {
         divide(1, 0)
                 .onFailure(e -> System.out.println("Not a number"))
