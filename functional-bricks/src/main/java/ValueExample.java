@@ -34,11 +34,5 @@ public class ValueExample {
 
         System.out.println(result3.get());
 
-        // Either
-
-        // Future
-
-        // Validation
-
     }
 }
