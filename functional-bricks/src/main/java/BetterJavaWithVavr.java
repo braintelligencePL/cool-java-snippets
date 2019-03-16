@@ -8,22 +8,34 @@ import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class MissingFunctionalJavaParts {
+public class BetterJavaWithVavr {
+}
 
+
+class Iterating {
     public static void main(String[] args) {
-
 
         // iterating with index
         System.out.println(
                 vavrZippingWithIndex("One", "Two")
         );
 
-
         // iterating is less verbose
-        Stream.of(1, 2, 3, 4)
-                .map(i -> i + 1)
+        Stream.of(1, 2, 3, 4, 5)
+                .map(i -> i + 5)
                 .peek(System.out::println);
 
+    }
+
+    private static Seq<String> vavrZippingWithIndex(String... args) {
+        return List
+                .of(args)
+                .zipWithIndex((arg, index) -> index + ". " + arg);
+    }
+}
+
+class FlatMapping {
+    public static void main(String[] args) {
 
         // legacy flatMap
         val legacyWay = legacyFlatMap(java.util.List.of(
@@ -39,6 +51,26 @@ public class MissingFunctionalJavaParts {
                 Option.of("One")
         ));
         System.out.println(vavrWay);
+
+    }
+
+    private static java.util.List<String> legacyFlatMap(java.util.List<Optional<String>> args) {
+        return args
+                .stream()
+                .flatMap(Optional::stream) // since Java 9
+                .map(String::toLowerCase)
+                .collect(Collectors.toList());
+    }
+
+    private static Seq vavrFlatMap(Seq<Option<String>> args) {
+        return args
+                .flatMap(Function.identity()) // same as flatMap(arg -> arg)
+                .map(String::toLowerCase);
+    }
+}
+
+class ConditionChecker {
+    public static void main(String[] args) {
 
         // Classical if/else for null
         System.out.println(
@@ -64,26 +96,6 @@ public class MissingFunctionalJavaParts {
 
     }
 
-    private static Seq<String> vavrZippingWithIndex(String... args) {
-        return List
-                .of(args)
-                .zipWithIndex((arg, index) -> index + ". " + arg);
-    }
-
-    private static java.util.List<String> legacyFlatMap(java.util.List<Optional<String>> args) {
-        return args
-                .stream()
-                .flatMap(Optional::stream) // since Java 9
-                .map(String::toLowerCase)
-                .collect(Collectors.toList());
-    }
-
-    private static Seq vavrFlatMap(Seq<Option<String>> args) {
-        return args
-                .flatMap(Function.identity()) // same as flatMap(arg -> arg)
-                .map(String::toLowerCase);
-    }
-
     private static String nullCheck(String value) {
         if (value != null) {
             return value.toUpperCase();
@@ -96,6 +108,7 @@ public class MissingFunctionalJavaParts {
                 .map(String::toLowerCase) // executed only when Option is some()
                 .getOrElse(value);
     }
+
 
     private static String normalConditionChecker(String value) {
         if (value != null && value.startsWith("A") && value.endsWith("Z")) {
@@ -113,3 +126,4 @@ public class MissingFunctionalJavaParts {
                 .getOrElse("ELSE");
     }
 }
+
