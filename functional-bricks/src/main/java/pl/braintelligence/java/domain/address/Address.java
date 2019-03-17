@@ -1,8 +1,7 @@
-package pl.braintelligence.java.domain;
+package pl.braintelligence.java.domain.address;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor

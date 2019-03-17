@@ -4,11 +4,16 @@ import io.vavr.collection.List;
 import io.vavr.collection.Seq;
 import io.vavr.collection.Stream;
 import io.vavr.control.Option;
+import lombok.extern.slf4j.Slf4j;
 import lombok.val;
+import org.apache.commons.lang3.RandomStringUtils;
+import pl.braintelligence.java.domain.user.User;
 
 import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+
+import static io.vavr.CheckedFunction1.lift;
 
 public class BetterJavaWithVavr {
 }
@@ -70,28 +75,28 @@ class FlatMapping {
     }
 }
 
+@Slf4j
 class ConditionChecker {
     public static void main(String[] args) {
 
         // Classical if/else for null
-        System.out.println(
+        log.info(
                 nullCheck(null)
         );
 
         // Better if/else with Option
-        System.out.println(
+        log.info(
                 vavrNullCheck(null)
         );
 
-
         // More verbose example for conditions
-        System.out.println(
+        log.info(
                 normalConditionChecker("qwerty")
         );
 
         // Functional condition check
-        System.out.println(
-                vavrConditionChecker("qwerty")
+        log.info(
+                vavrConditionChecker("AqwertyZ")
         );
 
 
@@ -107,7 +112,7 @@ class ConditionChecker {
     private static String vavrNullCheck(String value) {
         return Option.of(value)
                 .map(String::toLowerCase) // executed only when Option is some()
-                .getOrElse(value);
+                .getOrElse("DEFAULT");
     }
 
 
@@ -127,3 +132,24 @@ class ConditionChecker {
                 .getOrElse("ELSE");
     }
 }
+
+@Slf4j
+class ValidationCheck {
+    public static void main(String[] args) {
+
+        // Dont try that at home
+        try {
+            User.legacyAccountNumberCheck(RandomStringUtils.randomAlphanumeric(23));
+        } catch (IllegalArgumentException ex) {
+            log.error(ex.getMessage());
+        }
+
+        // Make that instead
+        System.out.println(
+                lift(User::legacyAccountNumberCheck)
+                        .apply(RandomStringUtils.randomAlphanumeric(28))
+                        .getOrElse("DEFAULT")
+        );
+    }
+}
+

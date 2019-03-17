@@ -2,7 +2,12 @@ package pl.braintelligence.java;
 
 import io.vavr.control.Option;
 import lombok.RequiredArgsConstructor;
-import pl.braintelligence.java.domain.*;
+import pl.braintelligence.java.domain.address.Address;
+import pl.braintelligence.java.domain.address.OptionAddress;
+import pl.braintelligence.java.domain.user.OptionUser;
+import pl.braintelligence.java.domain.user.OptionUserRepository;
+import pl.braintelligence.java.domain.user.User;
+import pl.braintelligence.java.domain.user.UserRepository;
 
 import java.util.Optional;
 
@@ -36,7 +41,7 @@ public class WorkingWithOptionalCode {
             if (address.isPresent()) {
                 Optional<String> street = Optional.ofNullable(address.get().getStreet());
                 if (street.isPresent()) {
-                    return street; // even worse hell... not a way to go.
+                    return street; // even worse hell... not a way to go...
                 }
             }
         }

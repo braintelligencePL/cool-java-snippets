@@ -1,4 +1,4 @@
-package pl.braintelligence.java.domain;
+package pl.braintelligence.java.domain.address;
 
 import io.vavr.control.Option;
 import lombok.AllArgsConstructor;

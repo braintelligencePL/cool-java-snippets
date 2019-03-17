@@ -1,7 +1,5 @@
 package pl.braintelligence.java;
 
-import io.vavr.collection.List;
-import io.vavr.collection.Seq;
 import io.vavr.control.Option;
 import io.vavr.control.Try;
 import lombok.val;
@@ -51,5 +49,3 @@ class AnotherTryExample {
         return Try.of(() -> dividend / divisor);
     }
 }
-
-
