@@ -9,30 +9,35 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class WorkingWithOptionalCode {
 
-    private UserRepository userRepository;
-    private OptionUserRepository optionUserRepository;
+    private final UserRepository userRepository;
+    private final OptionUserRepository optionUserRepository;
 
-    private String badCascadingPileOfCrapAndNull_WorstOfTheWorstest() {
+    private String badCascadingPileOfCrapAndReturnNull_WorstOfTheWorstest() {
         User user = userRepository.findOne("123");
 
         if (user != null) {
             Address address = user.getAddress();
             if (address != null) {
-                return address.getStreet();
+                String street = address.getStreet();
+                if (street != null) {
+                    return street; // ufff.. finally...
+                }
             }
         }
 
         return null;
     }
 
-    private Optional<Address> badCascadingOptionalPileOfCrap() {
+    private Optional<String> badCascadingOptionalPileOfCrap() {
         Optional<User> user = Optional.ofNullable(userRepository.findOne("123"));
 
         if (user.isPresent()) {
             Optional<Address> address = Optional.ofNullable(user.get().getAddress());
-
             if (address.isPresent()) {
-                return address;
+                Optional<String> street = Optional.ofNullable(address.get().getStreet());
+                if (street.isPresent()) {
+                    return street; // even worse hell... not a way to go.
+                }
             }
         }
 
@@ -45,6 +50,6 @@ public class WorkingWithOptionalCode {
                 .map(OptionAddress::getStreet)
                 .getOrElse(Option.none());
     }
-
 }
+
 
