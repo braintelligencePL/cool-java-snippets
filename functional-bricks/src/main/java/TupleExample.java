@@ -5,8 +5,8 @@ public class TupleExample {
 
         var tuple = Tuple.of("Something ", 1)
                 .map(
-                        s -> s.concat("else"),
-                        i -> i + 1
+                        stringValue -> stringValue.concat("else"),
+                        integerValue -> integerValue + 1
                 );
 
         System.out.println(tuple); // (Something else, 2)
