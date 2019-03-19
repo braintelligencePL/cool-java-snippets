@@ -47,17 +47,17 @@ class FlatMapping {
         val legacyWay = legacyFlatMap(java.util.List.of(
                 Optional.of("One"),
                 Optional.of("One")
-        ));
-        val distinctValues = legacyWay.stream().distinct().collect(Collectors.toList());
-        System.out.println(distinctValues);
+        )).stream()
+                .distinct()
+                .collect(Collectors.toList());
 
+        System.out.println(legacyWay);
 
         // vavr flatMap
         val vavrWay = vavrFlatMap(List.of(
                 Option.of("One"),
                 Option.of("One")
         )).distinct();
-
         System.out.println(vavrWay.distinct());
 
     }
