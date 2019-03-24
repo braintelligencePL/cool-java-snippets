@@ -6,6 +6,7 @@ Feel free to create PR with better solutions!
 * Have IntelliJ idea and Jdk-11
 * Set [x] `Enable Annotation Processing` 
 * Set [x] `Create directories for empty content roots automatically`
+* Set [x] `Use project setting or set target platform to at least 1.8 in project structure`
 
 <br>
 

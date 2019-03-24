@@ -42,7 +42,9 @@ public class MatchingPatternExamples {
         );
 
         // expect:
-        assertThat(things.get("QWE").getOrElse(""))
+        val result = things.get("QWE").getOrElse("");
+
+        assertThat(result)
                 .isEqualTo("cat");
     }
 
@@ -57,13 +59,12 @@ public class MatchingPatternExamples {
         // then: response code resolved to some comment
         val commentOnStatusCode = matchStatusCodeInClassicalWay(response.statusCode());
 
-        // check comment
         assertThat(commentOnStatusCode)
                 .isEqualTo("wtf?");
     }
 
     @Test
-    public void shouldHandleStatusCodeInAProperWay() {
+    public void shouldHandleStatusCodeInAVavrWay() {
         // given: stubbed server status code response
         stubHttpCodeAsResponseFromSomeExternalServer(HttpStatus.I_AM_A_TEAPOT);
 
@@ -99,13 +100,12 @@ public class MatchingPatternExamples {
         );
     }
 
-    // Note that HttpClient throws IOException, InterruptedException and we just ignored that
     private HttpResponse performRequestForStatusCode() {
         return Try.of(() ->
                 httpClient.send(request, HttpResponse.BodyHandlers.ofString())
         ).get();
-    }
 
+    }
 
     private void stubHttpCodeAsResponseFromSomeExternalServer(HttpStatus httpStatus) {
         stubFor(get(urlEqualTo("/hello"))

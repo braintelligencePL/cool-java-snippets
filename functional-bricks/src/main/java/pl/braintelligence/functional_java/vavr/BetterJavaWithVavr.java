@@ -4,16 +4,20 @@ import io.vavr.collection.List;
 import io.vavr.collection.Seq;
 import io.vavr.collection.Stream;
 import io.vavr.control.Option;
+import io.vavr.control.Try;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
 import org.apache.commons.lang3.RandomStringUtils;
 import pl.braintelligence.functional_java.vavr.domain.user.User;
 
+import java.io.IOException;
+import java.util.Collections;
 import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import static io.vavr.CheckedFunction1.lift;
+
 
 public class BetterJavaWithVavr {
 }
@@ -78,79 +82,24 @@ class FlatMapping {
 }
 
 @Slf4j
-class ConditionChecker {
+class Lifting {
     public static void main(String[] args) {
 
-        // Classical if/else for null
-        log.info(
-                nullCheck(null)
-        );
-
-        // Better if/else with Option
-        log.info(
-                vavrNullCheck(null)
-        );
-
-        // More verbose example for conditions
-        log.info(
-                normalConditionChecker("qwerty")
-        );
-
-        // Functional condition check
-        log.info(
-                vavrConditionChecker("AqwertyZ")
-        );
-
-
-    }
-
-    private static String nullCheck(String value) {
-        if (value != null) {
-            return value.toUpperCase();
-        }
-        return value;
-    }
-
-    private static String vavrNullCheck(String value) {
-        return Option.of(value)
-                .map(String::toLowerCase) // executed only when Option is some()
-                .getOrElse("DEFAULT");
-    }
-
-
-    private static String normalConditionChecker(String value) {
-        if (value != null && value.startsWith("A") && value.endsWith("Z")) {
-            return "YEYY!!";
-        } else {
-            return "ELSE";
-        }
-    }
-
-    private static String vavrConditionChecker(String value) {
-        return Option.of(value)
-                .filter(given -> given.startsWith("A"))
-                .filter(given -> given.endsWith("Z"))
-                .map(ignore -> "YEYY!!")
-                .getOrElse("ELSE");
-    }
-}
-
-@Slf4j
-class ValidationCheck {
-    public static void main(String[] args) {
-
-        // Dont try that at home
+        // classic try-catch
         try {
-            User.legacyAccountNumberCheck(RandomStringUtils.randomAlphanumeric(23));
-        } catch (IllegalArgumentException ex) {
-            log.error(ex.getMessage());
+            User.findUserInfoByAccountNumber(RandomStringUtils.randomAlphanumeric(22));
+        } catch (IOException e) {
+            log.error(e.getMessage());
         }
 
-        // Make that instead
         System.out.println(
-                lift(User::legacyAccountNumberCheck)
-                        .apply(RandomStringUtils.randomAlphanumeric(28))
-                        .getOrElse("DEFAULT")
+                lift(User::findUserInfoByAccountNumber)
+                        .apply(RandomStringUtils.randomAlphanumeric(22))
+                        .getOrElse(Collections.singletonList("DEFAULT"))
         );
+
+        Try.of(() -> User.findUserInfoByAccountNumber("123"))
+                .onSuccess(System.out::println);
     }
+
 }

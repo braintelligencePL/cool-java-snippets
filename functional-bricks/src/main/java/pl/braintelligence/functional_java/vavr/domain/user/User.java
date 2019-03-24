@@ -5,25 +5,26 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import pl.braintelligence.functional_java.vavr.domain.address.Address;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class User {
-    public static final int IBAN_LENGTH = 28;
     private String name;
     private Address address;
     private String accountNumber;
 
-    // This check should be done while creating domain object
-    // but lets assume that this is some legacy code so we have to work with it :(
-    public static String legacyAccountNumberCheck(String accountNumber) {
-        if (checkAccountNumberLength(accountNumber))
-            throw new IllegalArgumentException("Invalid account number length.");
-        return accountNumber;
+    public static List<String> findUserInfoByAccountNumber(String accountNumber) throws IOException {
+
+        return Files.lines(Paths.get(accountNumber))
+                .map(String::toUpperCase)
+                .collect(Collectors.toList());
     }
 
-    private static boolean checkAccountNumberLength(String accountNumber) {
-        return accountNumber.length() != IBAN_LENGTH;
-    }
 }
 

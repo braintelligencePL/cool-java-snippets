@@ -1,42 +1,28 @@
 package pl.braintelligence.functional_java.vavr.value;
 
-import io.vavr.control.Option;
+import io.vavr.collection.List;
 import io.vavr.control.Try;
 import lombok.val;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.springframework.context.annotation.Description;
-import org.springframework.data.util.Lazy;
+import pl.braintelligence.domain.Article;
 
 import java.net.URL;
-import java.util.UUID;
+import java.util.NoSuchElementException;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.assertj.core.api.AssertionsForClassTypes.catchThrowable;
 
-public class ValueExamples {
-
-    @Test
-    void optionExample() {
-        // given:
-        val result = Option.of(null)
-                .map(Object::toString)
-                .map(String::toLowerCase)
-                .getOrElse(() -> "option default");
-
-        // expect:
-        assertThat(result)
-                .isEqualTo("option default");
-    }
+public class TryExample {
 
     @Test
     void tryExample_createURL() {
-        // given:
+        // given: some invalid url
         val result = Try.of(() -> new URL("BLAAH//hHttp://braintelligence.pl"))
                 .map(URL::getHost)
                 .getOrElse(() -> "google.pl");
 
-        // expect:
+        // expect: default url
         assertThat(result)
                 .isEqualTo("google.pl");
     }
@@ -44,7 +30,7 @@ public class ValueExamples {
     @Test
     @DisplayName("Should fail when divided by zero")
     void tryExample_division() {
-        // when: divided by zero throw ArithmeticException
+        // when: divided by zero
         Throwable thrown = catchThrowable(() ->
                 divide(1, 0)
                         .onFailure(ex -> System.out.println("Not a number"))
@@ -52,30 +38,40 @@ public class ValueExamples {
                         .get()
         );
 
-        // then: verify ArithmeticException
+        // then: throws ArithmeticException
         assertThat(thrown)
                 .isInstanceOf(ArithmeticException.class);
     }
 
-
     @Test
-    @Description("Lazy is memoized and its referentially transparent")
-    void lazyExample() {
-        // given:
-        val result = Lazy.of(UUID.randomUUID())
-                .map(Object::toString)
-                .map(String::toUpperCase);
-
+    void tryExample_searchForArticles() {
         // when:
-        val firstCallUUID = result.get();  // 52EA7812
-        val secondCallUUID = result.get(); // 52EA7812
+        val result = fetchArticlesFromFacebook()
+                .orElse(this::fetchArticlesFromGoogle)
+                .getOrElse(List::empty)
+                .filter(name -> !name.getName().contains("123"))
+                .map(Article::getName);
 
-        // then:
-        assertThat(secondCallUUID)
-                .isEqualTo(firstCallUUID);
+        // expect: correctly fetched article
+        assertThat(result)
+                .isEqualTo(List.of("name"));
     }
 
-    Try<Integer> divide(Integer dividend, Integer divisor) {
+    private Try<List<Article>> fetchArticlesFromGoogle() {
+        return Try.of(() -> List.of(
+                new Article("123", "content"),
+                new Article("name", "content"))
+        );
+    }
+
+    private Try<List<Article>> fetchArticlesFromFacebook() {
+        return Try.of(() -> {
+            throw new NoSuchElementException();
+        });
+    }
+
+    private Try<Integer> divide(Integer dividend, Integer divisor) {
         return Try.of(() -> dividend / divisor);
     }
 }
+
