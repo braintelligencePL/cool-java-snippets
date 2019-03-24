@@ -27,7 +27,7 @@ Feel free to create PR with better solutions!
 
 ## Few katas from hackerrank and other platforms 🥋🥋
 
-* [Tests in Spock](https://github.com/braintelligencePL/snippets-and-katas-of-jvm-languages/tree/master/katas/src/test/groovy/pl/braintelligence/katas)
-* [Solutions in Java](https://github.com/braintelligencePL/snippets-and-katas-of-jvm-languages/tree/master/katas/src/main/java/pl/braintelligence/katas)
+* [Each kata has tests in Spock](https://github.com/braintelligencePL/snippets-and-katas-of-jvm-languages/tree/master/katas/src/test/groovy/pl/braintelligence/katas)
 * [Solutions in Kotlin](https://github.com/braintelligencePL/snippets-and-katas-of-jvm-languages/tree/master/katas/src/main/kotlin/pl/braintelligence/katas)
+* [Solutions in Java](https://github.com/braintelligencePL/snippets-and-katas-of-jvm-languages/tree/master/katas/src/main/java/pl/braintelligence/katas)
 
