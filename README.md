@@ -3,27 +3,22 @@
 Feel free to create PR with better solutions!
 
 #### ⚙ Prerequisites - setup
-* Have IntelliJ idea and Jdk-11
 * Set [x] `Enable Annotation Processing` 
 * Set [x] `Create directories for empty content roots automatically`
 * Set [x] `Use project setting or set target platform to at least 1.8 in project structure`
+
+#### ⚙ Prerequisites - must have
+* At least 1.3 version of kotlin plugin
+* IntelliJ Idea
+* JDK-11
 
 <br>
 
 ## Java  ☕
 
-### ☕ [Three ways to TryAndCatch]() [WIP]
-
-* classical way with a use of a standard library
-* functional way with a use of [jOOλ - lib](https://github.com/jOOQ/jOOL) 
-* functional way with a use of [vavr - lib](https://github.com/vavr-io/vavr)
 
 ## Kotlin 💪
 
-### ⚙ [Three ways to TryAndCatch]() [WIP]
-
-* classical way with a use of a standard library
-* functional way with [Arrow - lib](https://arrow-kt.io/docs/) (similar to vavr in Java)
 
 ## Few katas from hackerrank and other platforms 🥋🥋
 
