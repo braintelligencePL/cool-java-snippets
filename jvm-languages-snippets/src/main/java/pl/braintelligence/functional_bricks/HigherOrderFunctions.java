@@ -1,4 +1,4 @@
-package pl.braintelligence.functional_java.vavr;
+package pl.braintelligence.functional_bricks;
 
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
