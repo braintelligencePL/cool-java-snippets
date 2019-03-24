@@ -8,7 +8,7 @@ import io.vavr.control.Try;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
 import org.apache.commons.lang3.RandomStringUtils;
-import pl.braintelligence.functional_java.vavr.domain.user.User;
+import pl.braintelligence.functional_bricks.domain.user.User;
 
 import java.io.IOException;
 import java.util.Collections;

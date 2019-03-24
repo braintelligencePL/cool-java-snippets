@@ -1,13 +1,13 @@
-package pl.braintelligence.functional_java.vavr;
+package pl.braintelligence.functional_bricks;
 
 import io.vavr.control.Option;
 import lombok.RequiredArgsConstructor;
-import pl.braintelligence.functional_java.vavr.domain.address.Address;
-import pl.braintelligence.functional_java.vavr.domain.address.OptionAddress;
-import pl.braintelligence.functional_java.vavr.domain.user.OptionUser;
-import pl.braintelligence.functional_java.vavr.domain.user.OptionUserRepository;
-import pl.braintelligence.functional_java.vavr.domain.user.User;
-import pl.braintelligence.functional_java.vavr.domain.user.UserRepository;
+import pl.braintelligence.functional_bricks.domain.address.Address;
+import pl.braintelligence.functional_bricks.domain.address.OptionAddress;
+import pl.braintelligence.functional_bricks.domain.user.OptionUser;
+import pl.braintelligence.functional_bricks.domain.user.OptionUserRepository;
+import pl.braintelligence.functional_bricks.domain.user.User;
+import pl.braintelligence.functional_bricks.domain.user.UserRepository;
 
 import java.util.Optional;
 
@@ -49,7 +49,7 @@ public class WorkingWithOptionalCode {
         return Optional.empty();
     }
 
-    private Option<String> muchBetterWithOption() {
+    private Option<String> muchBetterWithFlatMap() {
         return optionUserRepository.findOne("123")
                 .flatMap(OptionUser::getAddress)
                 .map(OptionAddress::getStreet)

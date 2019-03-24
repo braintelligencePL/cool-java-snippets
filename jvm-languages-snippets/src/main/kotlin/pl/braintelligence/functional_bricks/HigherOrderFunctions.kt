@@ -1,4 +1,6 @@
-package pl.braintelligence.functional_bricks/*
+package pl.braintelligence.functional_bricks
+
+/*
 Example from Kotlin docs:
 https://play.kotlinlang.org/byExample/04_functional/01_Higher-Order%20Functions
 */

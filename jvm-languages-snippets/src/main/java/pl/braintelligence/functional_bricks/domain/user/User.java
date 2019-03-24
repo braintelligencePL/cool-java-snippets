@@ -1,9 +1,9 @@
-package pl.braintelligence.functional_java.vavr.domain.user;
+package pl.braintelligence.functional_bricks.domain.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import pl.braintelligence.functional_java.vavr.domain.address.Address;
+import pl.braintelligence.functional_bricks.domain.address.Address;
 
 import java.io.IOException;
 import java.nio.file.Files;
