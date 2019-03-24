@@ -1,7 +1,7 @@
-package pl.braintelligence.functional_java.vavr.spock_tutorial.domain
+package pl.braintelligence.functional_java.spock_tutorial.domain
 
 
-open interface UserRepo {
+interface UserRepo {
     fun isAvailable(): Boolean
     fun save(user: User)
 }

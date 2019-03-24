@@ -1,4 +1,4 @@
-package pl.braintelligence.functional_java.vavr.kotlin
+package pl.braintelligence.functional_bricks
 
 
 data class User(val name: String, val address: Address)

@@ -1,11 +1,11 @@
-package pl.braintelligence.functional_java.vavr.spock_tutorial
+package pl.braintelligence.functional_java.spock_tutorial
 
-import pl.braintelligence.functional_java.vavr.spock_tutorial.domain.User
-import pl.braintelligence.functional_java.vavr.spock_tutorial.domain.UserRepo
-import pl.braintelligence.functional_java.vavr.spock_tutorial.domain.UserRepoImpl
-import pl.braintelligence.functional_java.vavr.spock_tutorial.domain.User
-import pl.braintelligence.functional_java.vavr.spock_tutorial.domain.UserRepo
-import pl.braintelligence.functional_java.vavr.spock_tutorial.domain.UserRepoImpl
+import pl.braintelligence.functional_java.spock_tutorial.domain.User
+import pl.braintelligence.functional_java.spock_tutorial.domain.UserRepo
+import pl.braintelligence.functional_java.spock_tutorial.domain.UserRepoImpl
+import pl.braintelligence.functional_java.spock_tutorial.domain.User
+import pl.braintelligence.functional_java.spock_tutorial.domain.UserRepo
+import pl.braintelligence.functional_java.spock_tutorial.domain.UserRepoImpl
 import spock.lang.Specification
 
 class SpockTutorial extends Specification {
@@ -123,7 +123,7 @@ class SpockTutorial extends Specification {
         exception.message == "State was..."
     }
 
-    def "Mysterius _ parameter - test should fail"() {
+    def "Mysterius _ parameter - test should fail cuz nothing was tested"() {
         given:
         List list = Stub()
 
