@@ -8,7 +8,7 @@ import java.util.*
 class LazyExample {
 
     @Test
-    internal fun lazyExample() {
+    fun `This example is very Lazy`() {
         // given:
         val result = Eval.later { UUID.randomUUID() }
                 .value.toString().toUpperCase()

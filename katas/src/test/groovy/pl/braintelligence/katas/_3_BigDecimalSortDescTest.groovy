@@ -28,7 +28,7 @@ class _3_BigDecimalSortDescTest extends Specification {
             get(4) == -100
         }
     }
-
+\
     def "(java) Should sort BigDecimal array in descending order"() {
         given:
         def subject = new Java_3_BigDecimalSortDesc()

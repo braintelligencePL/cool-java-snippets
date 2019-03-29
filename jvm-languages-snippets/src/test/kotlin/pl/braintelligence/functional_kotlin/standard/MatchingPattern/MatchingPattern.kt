@@ -13,7 +13,7 @@ import java.net.http.HttpResponse
 class MatchingPattern : BaseIntegrationTest(), BaseStubs {
 
     @Test
-    fun matchingPatternExample_httpClientFromJava11() {
+    fun `Matching pattern using when()`() {
         // given: stubbed HttpStatus response
         stubGivenHttpStatusCode(HttpStatus.I_AM_A_TEAPOT)
 
