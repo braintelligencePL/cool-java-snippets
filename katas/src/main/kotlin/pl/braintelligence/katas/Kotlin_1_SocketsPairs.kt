@@ -13,7 +13,8 @@ class Kotlin_1_SocketsPairs {
     }
 
     fun countNumberOfPairsShortVersion(arr: IntArray) = arr.toList()
-            .groupBy { it }.values
+            .groupBy { it }
+            .values
             .map { countPairs(it) }
             .sum()
 
