@@ -15,9 +15,11 @@ Feel free to create PR with better solutions!
 <br>
 
 ## Java  ☕
+[Examples of using Vavr](https://github.com/braintelligencePL/snippets-of-jvm-languages/tree/master/jvm-languages-snippets/src/test/java/pl/braintelligence/functional_java/vavr)
 
 
 ## Kotlin 💪
+[Example of using Arrow](https://github.com/braintelligencePL/snippets-of-jvm-languages/tree/master/jvm-languages-snippets/src/test/kotlin/pl/braintelligence/functional_kotlin)
 
 
 ## Few katas from hackerrank and other platforms 🥋🥋
