@@ -1,4 +1,4 @@
-package pl.braintelligence.functional_kotlin.standard.MatchingPattern
+package pl.braintelligence.functional_kotlin.standard.matching_pattern
 
 import org.assertj.core.api.AssertionsForClassTypes.assertThat
 import org.junit.Test

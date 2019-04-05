@@ -1,3 +1,2 @@
 include 'jvm-languages-snippets'
-include 'functional-bricks'
 include 'katas'
