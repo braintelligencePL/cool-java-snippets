@@ -5,7 +5,7 @@ import io.vavr.control.Try;
 import lombok.val;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import pl.braintelligence.domain.Article;
+import pl.braintelligence.functional_kotlin.arrow.Article;
 
 import java.net.URL;
 import java.util.NoSuchElementException;

@@ -2,7 +2,7 @@ package pl.braintelligence.katas
 
 import spock.lang.Specification
 
-class _4_KMostFrequentElements extends Specification {
+class _4_KMostFrequentElementsTest extends Specification {
 
     def "(kotlin) Should give me most frequent element"() {
         given: "array of numbers"

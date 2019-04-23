@@ -17,11 +17,6 @@ public class WorkingWithOptionalCode {
     private final UserRepository userRepository;
     private final OptionUserRepository optionUserRepository;
 
-    public WorkingWithOptionalCode(UserRepository userRepository, OptionUserRepository optionUserRepository) {
-        this.userRepository = userRepository;
-        this.optionUserRepository = optionUserRepository;
-    }
-
     private String badCascadingPileOfCrapAndReturnNull_WorstOfTheWorstest() {
         User user = userRepository.findOne("123");
 
