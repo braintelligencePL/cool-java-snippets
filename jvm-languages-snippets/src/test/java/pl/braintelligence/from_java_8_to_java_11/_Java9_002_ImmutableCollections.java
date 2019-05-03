@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Java6Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class _002_Java9_ImmutableCollections {
+public class _Java9_002_ImmutableCollections {
 
     @Test
     @DisplayName("Its immutable but you can add something...")
@@ -49,6 +49,4 @@ public class _002_Java9_ImmutableCollections {
         assertThat(list.size())
                 .isEqualTo(1);
     }
-
-
 }

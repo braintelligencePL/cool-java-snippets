@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Description;
 
 import java.util.function.Consumer;
 
-public class _111_java11_lambdas {
+public class _Java11_000_YouCanAnnotateLambdas {
 
     @Test
     @DisplayName("You can put annotations to lambdas!")

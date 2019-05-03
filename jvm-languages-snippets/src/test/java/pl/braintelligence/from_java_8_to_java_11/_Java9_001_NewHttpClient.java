@@ -10,7 +10,7 @@ import java.net.http.HttpResponse;
 
 import static org.assertj.core.api.Java6Assertions.assertThat;
 
-public class _001_Java9_NewHttpClient {
+public class _Java9_001_NewHttpClient {
 
     @Test
     void http() throws IOException, InterruptedException {
@@ -19,7 +19,7 @@ public class _001_Java9_NewHttpClient {
 
         // and:
         var httpClient = HttpClient.newBuilder()
-             // .followRedirects(HttpClient.Redirect.NORMAL)
+//                .followRedirects(HttpClient.Redirect.NORMAL)
                 .build();
 
         // and:
@@ -39,3 +39,4 @@ public class _001_Java9_NewHttpClient {
                 .isBetween(200, 299);
     }
 }
+
