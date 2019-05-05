@@ -22,7 +22,7 @@ public class _Java9_005_Optional {
 
         // and:
         optionalValue.ifPresentOrElse(
-                e -> System.out.print(e),   // 'value' is printed
+                System.out::print,   // 'value' is printed
                 () -> System.out.print("Not found") // ...
         );
     }
@@ -34,14 +34,18 @@ public class _Java9_005_Optional {
         var stream = Stream.of(
                 Optional.of(1),
                 Optional.of(2),
+                Optional.of("abc"),
                 Optional.empty()
         );
 
         // when:
-        var result = stream.flatMap(Optional::stream).collect(Collectors.toList());
+        var result = stream
+                .flatMap(Optional::stream)
+                .filter(Integer.class::isInstance)
+                .collect(Collectors.toList());
 
         // then:
         assertThat(result)
-                .isEqualTo(List.of(1,2));
+                .isEqualTo(List.of(1, 2));
     }
 }

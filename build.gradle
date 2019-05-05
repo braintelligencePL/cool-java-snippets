@@ -14,7 +14,7 @@ buildscript {
 }
 
 
-configurations.subprojects {
+subprojects {
 
     apply plugin: 'idea'
     apply plugin: 'kotlin'

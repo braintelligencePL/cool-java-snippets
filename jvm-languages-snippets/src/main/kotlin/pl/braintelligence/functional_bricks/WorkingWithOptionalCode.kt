@@ -1,7 +1,5 @@
 package pl.braintelligence.functional_bricks
 
-import arrow.effects.IO
-
 
 data class User(val name: String, val address: Address)
 
