@@ -4,7 +4,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
 
 import static org.assertj.core.api.Java6Assertions.assertThat;
 
@@ -12,7 +12,6 @@ import static org.assertj.core.api.Java6Assertions.assertThat;
 public class _Java10_000_var {
 
     @Test
-    @DisplayName("Lambdas must have an explicit target type")
     void cannotInferType() {
 //        var a;
 //        var nothing = null;
@@ -27,6 +26,18 @@ public class _Java10_000_var {
         var arr2 = new ArrayList<String>(); // <String>
     }
 
+    @Test
+    @DisplayName("inferring types example")
+    void canInferTypeMap() {
+        // given:
+        var map = new HashMap<>(); // <Object, Object>
+
+        // when:
+        map.put("key", "value");
+
+        // then: Object != String
+//        String key = map.get("key");
+    }
 
     @Test
     @DisplayName("var is reserved type name NOT a keyword")

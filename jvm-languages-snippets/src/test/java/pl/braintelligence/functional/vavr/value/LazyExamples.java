@@ -1,4 +1,4 @@
-package pl.braintelligence.functional_java.vavr.value;
+package pl.braintelligence.functional.vavr.value;
 
 import lombok.val;
 import org.junit.jupiter.api.Test;

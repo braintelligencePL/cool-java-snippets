@@ -1,6 +1,7 @@
-package pl.braintelligence.functional_java.vavr.tuple;
+package pl.braintelligence.functional.vavr.tuple;
 
 import io.vavr.Tuple;
+import io.vavr.Tuple6;
 import lombok.val;
 import org.junit.jupiter.api.Test;
 

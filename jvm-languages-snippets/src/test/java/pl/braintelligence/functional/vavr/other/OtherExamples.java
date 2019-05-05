@@ -1,4 +1,4 @@
-package pl.braintelligence.functional_java.vavr.other;
+package pl.braintelligence.functional.vavr.other;
 
 import io.vavr.collection.HashMap;
 import lombok.val;

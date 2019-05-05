@@ -57,7 +57,7 @@ public class _Java9_004_StreamImprovements {
     }
 
     @Test
-    @DisplayName("iterate from java 9")
+    @DisplayName("iterate from java 9 - enables stream to be more like for loop")
     void iterateFromJava9() {
         // when: iterate(T seed, Predicate hasNext, UnaryOperator next)
         var numbers = Stream.iterate(1, limit(10), i -> i + 1)

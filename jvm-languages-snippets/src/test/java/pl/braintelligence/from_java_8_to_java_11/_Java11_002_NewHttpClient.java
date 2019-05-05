@@ -10,7 +10,7 @@ import java.net.http.HttpResponse;
 
 import static org.assertj.core.api.Java6Assertions.assertThat;
 
-public class _Java9_001_NewHttpClient {
+public class _Java11_002_NewHttpClient {
 
     @Test
     void http() throws IOException, InterruptedException {

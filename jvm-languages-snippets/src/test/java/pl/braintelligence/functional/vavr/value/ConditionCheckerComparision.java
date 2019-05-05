@@ -1,4 +1,4 @@
-package pl.braintelligence.functional_java.vavr.value;
+package pl.braintelligence.functional.vavr.value;
 
 import io.vavr.control.Option;
 import lombok.val;
@@ -34,8 +34,8 @@ public class ConditionCheckerComparision {
     void optionExample_vavrNullCheck() {
         // when: vavr if-else
         val result = Option.of(valueToCheck)
-                .filter(startsWith("A"))
-                .filter(startsWith("Z"))
+                .filter(it -> !it.startsWith("A"))
+                .filter(it -> !it.startsWith("Z"))
                 .map(ignore -> "YEYY!!")
                 .getOrElse("ELSE");
 
@@ -44,8 +44,4 @@ public class ConditionCheckerComparision {
                 .isEqualTo("YEYY!!");
     }
 
-    @NotNull
-    private Predicate<String> startsWith(String a) {
-        return given -> given.startsWith("A");
-    }
 }

@@ -12,7 +12,7 @@ import static org.assertj.core.api.Java6Assertions.assertThat;
 public class _JavaXX_000_WaysToHandleNullsInList {
 
     @Test
-    void checkNull_1() {
+    void checkNull_1_standard() {
         // given:
         var list = Arrays.asList("111", null, null, null);
 
@@ -27,7 +27,20 @@ public class _JavaXX_000_WaysToHandleNullsInList {
     }
 
     @Test
-    void checkNull_2() {
+    void checkNull_1_vavr() {
+        // given:
+        var list = io.vavr.collection.List.of("111", null, null, null);
+
+        // when:
+        var result = list.filter(Objects::nonNull);
+
+        // then:
+        assertThat(result.size())
+                .isEqualTo(1);
+    }
+
+    @Test
+    void checkNull_2_standard() {
         // given:
         var list = new ArrayList<>(
                 Arrays.asList("111", null, null, null)
@@ -40,6 +53,5 @@ public class _JavaXX_000_WaysToHandleNullsInList {
         assertThat(list.size())
                 .isEqualTo(1);
     }
-
 
 }

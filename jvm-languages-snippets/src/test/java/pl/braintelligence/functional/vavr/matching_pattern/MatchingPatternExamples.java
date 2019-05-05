@@ -1,4 +1,4 @@
-package pl.braintelligence.functional_java.vavr.matching_pattern;
+package pl.braintelligence.functional.vavr.matching_pattern;
 
 import com.github.tomakehurst.wiremock.junit.WireMockRule;
 import io.vavr.collection.HashMap;

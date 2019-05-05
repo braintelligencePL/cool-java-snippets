@@ -50,3 +50,4 @@ public class _Java9_002_ImmutableCollections {
                 .isEqualTo(1);
     }
 }
+
