@@ -10,7 +10,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 public class _Java10_001_NonDenotableTypeExample {
 
     @Test
-    @DisplayName("non denotable types ( types that cannot be inferred to known type) ")
+    @DisplayName("non denotable types - types that cannot be inferred to known type")
     void creatingInnerClass() {
         // given:
         var map = new HashMap<>() { // anonymous class

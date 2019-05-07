@@ -1,9 +1,11 @@
 package pl.braintelligence.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
+@AllArgsConstructor
 public class Article {
-    private final String name;
-    private final String content;
+    private String name;
+    private String content;
 }

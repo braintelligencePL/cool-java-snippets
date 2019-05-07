@@ -6,7 +6,7 @@ import java.util.Optional;
 
 import static org.assertj.core.api.Java6Assertions.assertThat;
 
-public class _Java9_006_Optional_MoreRealExample {
+public class _Java9_006_Optional_Example {
 
     @Test
     void if_else_if_else() {
@@ -14,7 +14,7 @@ public class _Java9_006_Optional_MoreRealExample {
         var defaultTemperature =
                 Optional.of(new Temperature(10.5));
 
-        // when: fetch some external temperature from API, DB... you name it
+        // when: fetch some external temperature from API, DB... fluently chained calls
         var result =
                 getTemperatureFromGoogle()
                         .or(this::getTemperatureFromYourDB)

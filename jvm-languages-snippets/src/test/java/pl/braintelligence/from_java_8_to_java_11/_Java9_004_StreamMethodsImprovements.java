@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 import static java.util.stream.Collectors.toList;
 import static org.assertj.core.api.Java6Assertions.assertThat;
 
-public class _Java9_004_StreamImprovements {
+public class _Java9_004_StreamMethodsImprovements {
 
     @Test
     void takeWhile() {
