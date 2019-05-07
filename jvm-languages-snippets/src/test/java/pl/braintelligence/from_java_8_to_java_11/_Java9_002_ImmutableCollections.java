@@ -38,7 +38,7 @@ public class _Java9_002_ImmutableCollections {
 
     @Test
     @DisplayName("Its immutable but you can use add method...")
-    void standardJavaCollection() {
+    void standardJava9Collection() {
         // given:
         var list = java.util.List.of(1, 2, 3, 4, 5);
 
