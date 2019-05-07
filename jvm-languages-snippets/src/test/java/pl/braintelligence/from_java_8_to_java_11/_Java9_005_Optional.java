@@ -25,6 +25,10 @@ public class _Java9_005_Optional {
                 System.out::print,   // 'value' is printed
                 () -> System.out.print("Not found") // ...
         );
+
+        // and:
+        assertThat(optionalValue.isEmpty()) // from java 11
+                .isFalse();
     }
 
     @Test

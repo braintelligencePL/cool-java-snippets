@@ -4,13 +4,40 @@ import io.vavr.control.Try;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 import static org.assertj.core.api.Java6Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class _Java9_002_ImmutableCollections {
 
     @Test
-    @DisplayName("Its immutable but you can add something...")
+    public void standardJava8() {
+        // given:
+        List<String> names = new ArrayList<>();
+            names.add("John");
+            names.add("George");
+            names.add("Betty");
+
+        var list = Collections.unmodifiableList(names);
+
+        // when:
+        var thrown = Try.of(() ->
+                list.add("Jack")
+        );
+
+        // then:
+        assertThrows(
+                UnsupportedOperationException.class,
+                thrown::get
+        );
+
+    }
+
+    @Test
+    @DisplayName("Its immutable but you can use add method...")
     void standardJavaCollection() {
         // given:
         var list = java.util.List.of(1, 2, 3, 4, 5);
