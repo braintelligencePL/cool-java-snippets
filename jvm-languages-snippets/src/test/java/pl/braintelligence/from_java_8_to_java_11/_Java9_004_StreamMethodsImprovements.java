@@ -24,7 +24,7 @@ public class _Java9_004_StreamMethodsImprovements {
 
         // then:
         assertThat(result)
-                .contains("a", "b");
+                .contains("a", "b", "123");
     }
 
     @Test

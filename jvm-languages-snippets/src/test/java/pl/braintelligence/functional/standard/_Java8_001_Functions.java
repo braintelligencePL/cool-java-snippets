@@ -1,4 +1,4 @@
-package pl.braintelligence.functional.standardJava;
+package pl.braintelligence.functional.standard;
 
 import org.junit.jupiter.api.Test;
 

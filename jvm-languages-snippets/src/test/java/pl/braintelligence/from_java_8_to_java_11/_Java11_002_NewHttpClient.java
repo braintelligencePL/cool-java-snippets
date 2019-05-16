@@ -19,7 +19,7 @@ public class _Java11_002_NewHttpClient {
 
         // and:
         var httpClient = HttpClient.newBuilder()
-//                .followRedirects(HttpClient.Redirect.NORMAL)
+                .followRedirects(HttpClient.Redirect.NORMAL)
                 .build();
 
         // and:

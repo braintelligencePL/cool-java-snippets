@@ -33,12 +33,11 @@ public class _Java9_002_ImmutableCollections {
                 UnsupportedOperationException.class,
                 thrown::get
         );
-
     }
 
     @Test
     @DisplayName("Its immutable but you can use add method...")
-    void standardJava9Collection() {
+    void standardJava9() {
         // given:
         var list = java.util.List.of(1, 2, 3, 4, 5);
 
@@ -54,7 +53,6 @@ public class _Java9_002_ImmutableCollections {
         );
 
     }
-
 
     @Test
     @DisplayName("Once there was Guava now its Vavr!")

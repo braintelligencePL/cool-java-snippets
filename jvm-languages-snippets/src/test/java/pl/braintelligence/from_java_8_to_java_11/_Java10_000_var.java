@@ -13,7 +13,7 @@ public class _Java10_000_var {
 
     @Test
     void cannotInferType() {
-//        var a;
+//        var x = "";
 //        var nothing = null;
 //        var lambda = () -> System.out.println("nope");
 //        var method = this::someMethod;
@@ -36,7 +36,7 @@ public class _Java10_000_var {
         map.put("key", "value");
 
         // then: Object != String
-//        String key = map.get("key");
+        String key = (String) map.get("key");
     }
 
     @Test

@@ -5,8 +5,8 @@ import arrow.core.getOrElse
 import arrow.core.orElse
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
-import pl.braintelligence.BaseIntegrationTest
-import pl.braintelligence.BaseStubs
+import pl.braintelligence.base.BaseIntegrationTest
+import pl.braintelligence.base.BaseStubs
 import java.net.URL
 
 data class Article(val name: String, val content: String)

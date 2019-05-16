@@ -1,4 +1,4 @@
-package pl.braintelligence
+package pl.braintelligence.base
 
 import com.github.tomakehurst.wiremock.client.WireMock.*
 import org.springframework.http.HttpStatus

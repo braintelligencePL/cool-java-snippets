@@ -1,4 +1,4 @@
-package pl.braintelligence
+package pl.braintelligence.base
 
 import com.github.tomakehurst.wiremock.junit.WireMockRule
 import org.junit.Rule

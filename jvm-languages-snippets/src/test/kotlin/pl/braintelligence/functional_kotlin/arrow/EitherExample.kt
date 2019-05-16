@@ -3,8 +3,8 @@ package pl.braintelligence.functional_kotlin.arrow
 import arrow.core.Either
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
-import pl.braintelligence.BaseIntegrationTest
-import pl.braintelligence.BaseStubs
+import pl.braintelligence.base.BaseIntegrationTest
+import pl.braintelligence.base.BaseStubs
 
 open class EitherExample : BaseIntegrationTest(), BaseStubs {
 

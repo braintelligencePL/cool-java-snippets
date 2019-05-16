@@ -49,16 +49,18 @@ subprojects {
         implementation group: 'org.apache.commons', name: 'commons-collections4', version: '4.1'
         implementation group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.6'
 
-        // Springvavr
+        // Spring
         implementation 'org.springframework.boot:spring-boot-starter-actuator'
         implementation 'org.springframework.boot:spring-boot-starter-web'
         implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+        implementation 'io.projectreactor:reactor-core'
 
         // Tests
         testImplementation 'com.github.tomakehurst:wiremock-jre8:2.21.0'
         testImplementation 'org.assertj:assertj-core:3.12.2'
         testImplementation 'org.spockframework:spock-core:1.2-groovy-2.5'
         testImplementation 'org.springframework.boot:spring-boot-starter-test'
+        testImplementation 'io.projectreactor:reactor-test'
         testImplementation 'io.mockk:mockk:1.9.2'
         testImplementation 'org.junit.jupiter:junit-jupiter-api'
         testImplementation 'org.junit.jupiter:junit-jupiter-params'

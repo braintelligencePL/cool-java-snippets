@@ -1,4 +1,4 @@
-package pl.braintelligence.reactive.StandardJava;
+package pl.braintelligence.reactive.standard;
 
 import io.vavr.control.Either;
 import org.junit.jupiter.api.Test;

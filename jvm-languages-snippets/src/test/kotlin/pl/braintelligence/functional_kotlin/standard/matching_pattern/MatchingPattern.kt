@@ -3,8 +3,8 @@ package pl.braintelligence.functional_kotlin.standard.matching_pattern
 import org.assertj.core.api.AssertionsForClassTypes.assertThat
 import org.junit.Test
 import org.springframework.http.HttpStatus
-import pl.braintelligence.BaseIntegrationTest
-import pl.braintelligence.BaseStubs
+import pl.braintelligence.base.BaseIntegrationTest
+import pl.braintelligence.base.BaseStubs
 import java.net.URI
 import java.net.http.HttpRequest
 import java.net.http.HttpResponse
