@@ -46,4 +46,14 @@ class Part001_FluxTest extends Specification {
                 .verifyError(IllegalStateException.class)
     }
 
+    def "Should count each every 100ms"() {
+        when:
+        def subject = part001_Flux.counter()
+
+        then:
+        StepVerifier.create(subject)
+                .expectNext(0L, 1L, 2L, 3L, 4L, 5L, 6L, 7L, 8L, 9L)
+                .verifyComplete()
+    }
+
 }
