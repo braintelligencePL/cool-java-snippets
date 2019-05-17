@@ -14,19 +14,23 @@ class Part001_Flux {
 
     fun errorFlux(): Flux<String> = TODO("Return IllegalStateException")
 
-    fun counter(): Flux<Long> = TODO("Create a _001_Flux that emits increasing values from 0 to 9 each 100ms")
+    fun counter(): Flux<Long> = TODO("Create a Flux that emits increasing values from 0L...9L each 100ms")
 
 }
 
 class Part001_FluxSolution {
 
-    fun emptyFlux(): Flux<String> = Flux.empty()
+    fun emptyFlux(): Flux<String> = Flux
+            .empty()
 
-    fun fluxFromValues(): Flux<String> = Flux.just("foo", "bar")
+    fun fluxFromValues(): Flux<String> = Flux
+            .just("foo", "bar")
 
-    fun fluxFromList(): Flux<String> = Flux.fromIterable(Arrays.asList("foo", "bar"))
+    fun fluxFromList(): Flux<String> = Flux
+            .fromIterable(Arrays.asList("foo", "bar"))
 
-    fun errorFlux(): Flux<String> = Flux.error(IllegalStateException())
+    fun errorFlux(): Flux<String> = Flux
+            .error(IllegalStateException())
 
     fun counter(): Flux<Long> = Flux
             .interval(Duration.ofMillis(100))
