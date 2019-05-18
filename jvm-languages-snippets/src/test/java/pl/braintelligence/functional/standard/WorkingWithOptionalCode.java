@@ -1,13 +1,13 @@
-package pl.braintelligence.functional_bricks;
+package pl.braintelligence.functional.standard;
 
 import io.vavr.control.Option;
 import lombok.RequiredArgsConstructor;
-import pl.braintelligence.functional_bricks.domain.address.Address;
-import pl.braintelligence.functional_bricks.domain.address.OptionAddress;
-import pl.braintelligence.functional_bricks.domain.user.OptionUser;
-import pl.braintelligence.functional_bricks.domain.user.OptionUserRepository;
-import pl.braintelligence.functional_bricks.domain.user.User;
-import pl.braintelligence.functional_bricks.domain.user.UserRepository;
+import pl.braintelligence.functional.standard.domain.address.Address;
+import pl.braintelligence.functional.standard.domain.address.OptionAddress;
+import pl.braintelligence.functional.standard.domain.user.OptionUser;
+import pl.braintelligence.functional.standard.domain.user.OptionUserRepository;
+import pl.braintelligence.functional.standard.domain.user.User;
+import pl.braintelligence.functional.standard.domain.user.UserRepository;
 
 import java.util.Optional;
 

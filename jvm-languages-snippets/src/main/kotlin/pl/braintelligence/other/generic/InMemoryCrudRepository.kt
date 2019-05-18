@@ -1,4 +1,4 @@
-package pl.braintelligence.generic
+package pl.braintelligence.other.generic
 
 import java.util.concurrent.ConcurrentHashMap
 import kotlin.reflect.KClass

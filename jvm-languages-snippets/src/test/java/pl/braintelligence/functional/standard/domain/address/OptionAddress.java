@@ -1,4 +1,4 @@
-package pl.braintelligence.functional_bricks.domain.address;
+package pl.braintelligence.functional.standard.domain.address;
 
 import io.vavr.control.Option;
 import lombok.AllArgsConstructor;

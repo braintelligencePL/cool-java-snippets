@@ -1,10 +1,10 @@
-package pl.braintelligence.functional_bricks.domain.user;
+package pl.braintelligence.functional.standard.domain.user;
 
 import io.vavr.control.Option;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import pl.braintelligence.functional_bricks.domain.address.OptionAddress;
+import pl.braintelligence.functional.standard.domain.address.OptionAddress;
 
 @Data
 @AllArgsConstructor

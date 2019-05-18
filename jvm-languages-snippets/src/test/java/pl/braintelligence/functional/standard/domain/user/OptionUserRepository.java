@@ -1,4 +1,4 @@
-package pl.braintelligence.functional_bricks.domain.user;
+package pl.braintelligence.functional.standard.domain.user;
 
 import io.vavr.control.Option;
 import org.springframework.data.mongodb.repository.MongoRepository;

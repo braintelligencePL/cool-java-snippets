@@ -1,4 +1,4 @@
-package pl.braintelligence.functional_bricks.domain.user;
+package pl.braintelligence.functional.standard.domain.user;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 
