@@ -54,13 +54,13 @@ public class TryExample {
 
         // expect: correctly fetched article
         assertThat(result)
-                .isEqualTo(List.of("name"));
+                .isEqualTo(List.of("firstname"));
     }
 
     private Try<List<Article>> fetchArticlesFromGoogle() {
         return Try.of(() -> List.of(
                 new Article("123", "content"),
-                new Article("name", "content"))
+                new Article("firstname", "content"))
         );
     }
 

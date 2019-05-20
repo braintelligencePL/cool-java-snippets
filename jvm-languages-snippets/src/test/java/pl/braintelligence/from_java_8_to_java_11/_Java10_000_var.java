@@ -40,7 +40,7 @@ public class _Java10_000_var {
     }
 
     @Test
-    @DisplayName("var is reserved type name NOT a keyword")
+    @DisplayName("var is reserved type firstname NOT a keyword")
     void varIsTypeName() {
         // when:
         var var = "123";

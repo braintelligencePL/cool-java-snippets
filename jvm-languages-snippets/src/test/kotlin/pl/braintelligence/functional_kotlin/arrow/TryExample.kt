@@ -33,7 +33,7 @@ open class TryExample : BaseIntegrationTest(), BaseStubs {
                 .map { it.name }
 
         assertThat(result)
-                .isEqualTo(listOf("name"))
+                .isEqualTo(listOf("firstname"))
     }
 
     private fun fetchArticlesFromFacebook() = Try {
@@ -42,7 +42,7 @@ open class TryExample : BaseIntegrationTest(), BaseStubs {
 
     private fun fetchArticlesFromGoogle() = Try {
         listOf(
-                Article("name", "content"),
+                Article("firstname", "content"),
                 Article("123", "content")
         )
     }

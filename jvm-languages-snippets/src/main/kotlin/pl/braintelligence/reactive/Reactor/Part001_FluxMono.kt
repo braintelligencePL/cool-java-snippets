@@ -1,6 +1,6 @@
 package pl.braintelligence.reactive.Reactor
 
-import pl.braintelligence.other.domain.Person
+import pl.braintelligence.domain.Person
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 import java.time.Duration
@@ -67,20 +67,20 @@ class Part001_FluxMonoSolution {
     }
 
     fun createTwoPersons(): Flux<Person> = Flux.just(
-            Person("name-1", "last-1"),
-            Person("name-2", "last-2")
+            Person("firstname-1", "last-1"),
+            Person("firstname-2", "last-2")
     )
 
     fun capitalizeOne(user: Mono<Person>): Mono<Person> = user.map {
         Person(
-                it.name.toUpperCase(),
+                it.firstname.toUpperCase(),
                 it.lastname.toUpperCase()
         )
     }
 
     fun capitalizeMany(users: Flux<Person>): Flux<Person> = users.map {
         Person(
-                it.name.toUpperCase(),
+                it.firstname.toUpperCase(),
                 it.lastname.toUpperCase()
         )
     }

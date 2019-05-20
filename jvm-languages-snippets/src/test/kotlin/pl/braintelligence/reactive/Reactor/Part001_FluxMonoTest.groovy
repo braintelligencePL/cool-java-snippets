@@ -1,6 +1,6 @@
 package pl.braintelligence.reactive.Reactor
 
-import pl.braintelligence.other.domain.Person
+import pl.braintelligence.domain.Person
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 import reactor.test.StepVerifier
@@ -10,11 +10,11 @@ import java.time.Duration
 
 class Part001_FluxMonoTest extends Specification {
 
-    def fluxMono = new Part001_FluxMonoSolution()
+    def exercise = new Part001_FluxMonoSolution()
 
     def "Should create emptyFlux"() {
         when:
-        def subject = fluxMono.emptyFlux()
+        def subject = exercise.emptyFlux()
 
         then:
         StepVerifier.create(subject)
@@ -23,7 +23,7 @@ class Part001_FluxMonoTest extends Specification {
 
     def "Should create emptyMono"() {
         when:
-        def subject = fluxMono.emptyMono()
+        def subject = exercise.emptyMono()
 
         then:
         StepVerifier.create(subject)
@@ -32,7 +32,7 @@ class Part001_FluxMonoTest extends Specification {
 
     def "Should create Flux fromValues()"() {
         when:
-        def subject = fluxMono.fluxFromValues()
+        def subject = exercise.fluxFromValues()
 
         then:
         StepVerifier.create(subject)
@@ -42,7 +42,7 @@ class Part001_FluxMonoTest extends Specification {
 
     def "Should create Flux from List"() {
         when:
-        def subject = fluxMono.fluxFromList()
+        def subject = exercise.fluxFromList()
 
         then:
         StepVerifier.create(subject)
@@ -52,7 +52,7 @@ class Part001_FluxMonoTest extends Specification {
 
     def "Should return IllegalStateException"() {
         when:
-        def subject = fluxMono.errorFlux()
+        def subject = exercise.errorFlux()
 
         then:
         StepVerifier.create(subject)
@@ -61,7 +61,7 @@ class Part001_FluxMonoTest extends Specification {
 
     def "Should count each every 100ms"() {
         when:
-        def subject = fluxMono.counter()
+        def subject = exercise.counter()
 
         then:
         StepVerifier.create(subject)
@@ -71,14 +71,14 @@ class Part001_FluxMonoTest extends Specification {
 
     def "Should create Person"() {
         when:
-        def subject = fluxMono.createTwoPersons()
+        def subject = exercise.createTwoPersons()
 
         then:
         StepVerifier.create(subject)
-                .expectNextMatches { it.name == "name-1" }
+                .expectNextMatches { it.firstname == "firstname-1" }
                 .assertNext {
                     it.with {
-                        it.name == "name-2"
+                        it.firstname == "firstname-2"
                         it.lastname == "last-2"
                     }
                 }
@@ -87,7 +87,7 @@ class Part001_FluxMonoTest extends Specification {
 
     def "Should create 10000 elements"() {
         when:
-        def subject = fluxMono.expectLotsOfElements()
+        def subject = exercise.expectLotsOfElements()
 
         then:
         StepVerifier.withVirtualTime(subject)
@@ -101,7 +101,7 @@ class Part001_FluxMonoTest extends Specification {
         def person = Mono.just(new Person("upper", "case"))
 
         when:
-        def subject = fluxMono.capitalizeOne(person)
+        def subject = exercise.capitalizeOne(person)
 
         then:
         StepVerifier.create(subject)
@@ -117,16 +117,13 @@ class Part001_FluxMonoTest extends Specification {
         )
 
         when:
-        def subject = fluxMono.capitalizeMany(persons)
+        def subject = exercise.capitalizeMany(persons)
 
         then:
         StepVerifier.create(subject)
                 .expectNext(new Person("UPPER1", "CASE1"))
                 .expectNext(new Person("UPPER2", "CASE2"))
                 .verifyComplete()
-
     }
-
-
 
 }
