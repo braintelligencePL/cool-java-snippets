@@ -10,7 +10,7 @@ import java.time.Duration
 
 class Part001_FluxMonoTest extends Specification {
 
-    def exercise = new Part001_FluxMonoSolution()
+    def exercise = new Part001_FluxMono()
 
     def "Should create emptyFlux"() {
         when:
@@ -30,7 +30,7 @@ class Part001_FluxMonoTest extends Specification {
                 .verifyComplete()
     }
 
-    def "Should create Flux fromValues()"() {
+    def "Should create Flux fromValues (NO ARRAY ALLOWED)"() {
         when:
         def subject = exercise.fluxFromValues()
 

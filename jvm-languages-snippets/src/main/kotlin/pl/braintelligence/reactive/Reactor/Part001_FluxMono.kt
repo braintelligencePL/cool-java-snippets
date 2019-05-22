@@ -7,7 +7,7 @@ import java.time.Duration
 import java.util.*
 import java.util.function.Supplier
 
-class Part001_Flux {
+class Part001_FluxMono {
 
     fun emptyFlux(): Flux<String> =
             TODO("Return an empty Flux")
@@ -16,7 +16,7 @@ class Part001_Flux {
             TODO("Return an empty Mono")
 
     fun fluxFromValues(): Flux<String> =
-            TODO("Return a Flux with 2 values foo, bar (NO ARRAY)")
+            TODO("Return a Flux with 2 values foo, bar (NO ARRAY ALLOWED)")
 
     fun fluxFromList(): Flux<String> =
             TODO("Return a Flux with 2 values foo, bar (AS LIST)")
