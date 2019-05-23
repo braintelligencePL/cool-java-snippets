@@ -28,9 +28,13 @@ class ReactivePersonRepository(
         return withDelay(persons.toFlux())
     }
 
-    fun withDelay(userFlux: Flux<Person>): Flux<Person> {
-        return Flux.interval(Duration.ofMillis(delayInMs)).zipWith(userFlux, BiFunction { _, user -> user })
-    }
+    fun withDelay(userFlux: Flux<Person>): Flux<Person> = Flux
+            .interval(Duration.ofMillis(delayInMs))
+            .zipWith(
+                    userFlux,
+                    BiFunction { _, user -> user } // _ means variable is not used (placeholder)
+            )
+
     companion object {
         private const val DEFAULT_DELAY_IN_MS = 100L
     }

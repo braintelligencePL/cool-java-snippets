@@ -12,12 +12,12 @@ class Part002_MergeTest extends Specification {
     def exercise = new Part002_MergeSolution()
 
     ReactiveRepository<Person> slowRepository
-    ReactiveRepository<Person> fastRepository
     ReactiveRepository<Person> middleRepository
+    ReactiveRepository<Person> fastRepository
 
     def setup() {
-        slowRepository = new ReactivePersonRepository(500, List.of(Person.WHITE_WALKER, Person.JON_SNOW))
         middleRepository = new ReactivePersonRepository(250, List.of(Person.JOHN_DOE))
+        slowRepository = new ReactivePersonRepository(500, List.of(Person.WHITE_WALKER, Person.JON_SNOW))
         fastRepository = new ReactivePersonRepository(50, List.of(Person.FRANSIS_UNDERWOOD, Person.WALTER_WHITE))
     }
 
@@ -31,11 +31,30 @@ class Part002_MergeTest extends Specification {
 
         then:
         StepVerifier.create(subject)
-                .expectNext(Person.FRANSIS_UNDERWOOD)
-                .expectNext(Person.WALTER_WHITE)
-                .expectNext(Person.JOHN_DOE)
-                .expectNext(Person.WHITE_WALKER)
-                .expectNext(Person.JON_SNOW)
-                .verifyComplete()
+                .expectNext(
+                        Person.FRANSIS_UNDERWOOD, Person.WALTER_WHITE,
+                        Person.JOHN_DOE,
+                        Person.WHITE_WALKER, Person.JON_SNOW
+                ).verifyComplete()
     }
+
+    def "Should concat persons1, persons2, persons3 without interleave"() {
+        when:
+        def subject = exercise.mergeFluxWithoutInterleave(
+                middleRepository.findAll(),
+                slowRepository.findAll(),
+                fastRepository.findAll(),
+        )
+
+        then:
+        StepVerifier.create(subject)
+                .expectNext(
+                        Person.WHITE_WALKER, Person.JON_SNOW,
+                        Person.JOHN_DOE,
+                        Person.FRANSIS_UNDERWOOD, Person.WALTER_WHITE,
+                ).verifyComplete()
+    }
+
+
+
 }
