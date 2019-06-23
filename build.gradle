@@ -68,5 +68,9 @@ subprojects {
         testRuntime 'org.junit.platform:junit-platform-engine'
     }
 
-
+    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+        kotlinOptions {
+            jvmTarget = "1.8"
+        }
+    }
 }
