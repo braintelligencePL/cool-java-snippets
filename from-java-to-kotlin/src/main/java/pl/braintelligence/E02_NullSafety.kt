@@ -5,12 +5,11 @@ fun main() {
 
     name?.let { print(it.length) }
 
-    name ?: print("default fallback")
+    name ?: println("default fallback")
 
     name?.let {
         print(it.length)
     } ?: run {
         print("default fallback")
     }
-
 }

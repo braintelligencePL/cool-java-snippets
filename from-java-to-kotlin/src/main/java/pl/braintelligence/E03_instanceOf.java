@@ -3,7 +3,7 @@ package pl.braintelligence;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class E03_InstanceOf {
+public class E03_instanceOf {
     public static void main(String[] args) {
 
         // Instance of - String

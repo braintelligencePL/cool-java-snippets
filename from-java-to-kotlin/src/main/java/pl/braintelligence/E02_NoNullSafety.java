@@ -11,12 +11,12 @@ public class E02_NoNullSafety {
             System.out.println(name.length());
         }
 
-        var optional = Optional.ofNullable(name);
+        Optional<String> optional = Optional.ofNullable(name);
 
-        optional.ifPresentOrElse(
-                item -> System.out.println(item),
-                item -> ""
-        );
+//        optional.ifPresentOrElse(
+//                item -> System.out.println(item),
+//                item -> ""
+//        );
 
     }
 }
