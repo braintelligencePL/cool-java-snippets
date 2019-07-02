@@ -3,9 +3,6 @@ package pl.braintelligence.functional_java.spock_tutorial
 import pl.braintelligence.functional_java.spock_tutorial.domain.User
 import pl.braintelligence.functional_java.spock_tutorial.domain.UserRepo
 import pl.braintelligence.functional_java.spock_tutorial.domain.UserRepoImpl
-import pl.braintelligence.functional_java.spock_tutorial.domain.User
-import pl.braintelligence.functional_java.spock_tutorial.domain.UserRepo
-import pl.braintelligence.functional_java.spock_tutorial.domain.UserRepoImpl
 import spock.lang.Specification
 
 class SpockTutorial extends Specification {
